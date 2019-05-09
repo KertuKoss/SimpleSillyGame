@@ -9,14 +9,18 @@ class List extends Component {
     }
 
     HandleClick = (event) => {
-        // console.log('here')
-        //in progress
-       return <div>
-            <img src ={this.props.pics[0]} href = {this.props.url[0]}> </img>
-            <img src ={this.props.pics[1]} href = {this.props.url[1]}> </img>
-            <img src ={this.props.pics[1]} href = {this.props.url[2]}> </img>
-        </div>
-      
+         //console.log('here')
+    //     //in progress
+    // //    return (<div>
+    // //         <img src ={this.props.pics[0]} href = {this.props.url[0]}> </img>
+    // //         <img src ={this.props.pics[1]} href = {this.props.url[1]}> </img>
+    // //         <img src ={this.props.pics[1]} href = {this.props.url[2]}> </img>
+    // //     </div>)
+
+    //     return (this.props.pics.map( picture => {return <div className='box'><img>{picture}</img></div>}))
+        return (this.props.handler(event))
+
+
     }
 
     // pics and url 
@@ -25,7 +29,7 @@ class List extends Component {
         return (
             <div className="App">
             
-            <button className= 'button' onClick = {this.HandleClick} >Entire list </button>
+            <button className= 'button' onClick = {this.HandleClick}> Entire list </button>
             </div>
 
         );

@@ -13,8 +13,61 @@
 .button{ 
   width: 100px; 
   height: 20px; 
-  border-radius: 10px;
+  border-radius: 4px;
+  border-color:black;
   margin-top: 20px;
+  border:1px;
 }
+
+button:hover{
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: black;
+  border: solid 1px #fff;
+  color: whitesmoke;
+  -webkit-appearance: none;
+ 
+}
+
+.print{
+  color: black;
+}
+
+
+
+/*DISPLAY COMPONENT*/
+
+.display{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 660px;
+  margin: auto;
+  margin-top:50px;
+}
+
+.display .box{
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  background-color: red;
+  margin:10px;
+  padding-top: 85px;
+  box-sizing: border-box;
+}
+
+.display .box p{
+  background-color: white;
+  padding: 0 6px;
+  margin-top: 100px;
+  display: inline;
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+}
+
+
+
 
 

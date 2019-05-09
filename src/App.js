@@ -30,13 +30,21 @@ class App extends Component {
     })
   }
 
+  handleSubmit = (event) => {
+    console.log("here2")
+    return (this.state.gamepic.map( (picture) => {return <img src = {picture}></img>}))
+  }
+
   render() {
     return (
       <div className="App">
         <h1>STUPID. POINTLESS. SILLY</h1>
         <p>Randomize a random game</p>
         <Button changepic={this.newpic} pics = {this.state.gamepic} url={this.state.gamehref} >Randomize</Button>
-        <List pics = {this.state.gamepic} url={this.state.gamehref} ></List>
+        <List className= 'display' handler={this.handleSubmit} ></List>
+        {/* <div>
+        {this.state.gamepic.map( (picture) => {return <img src = {picture}></img>})}
+        </div> */}
       </div>
     );
   }
