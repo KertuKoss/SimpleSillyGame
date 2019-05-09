@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './App.css';
 import Button from "./Button.js";
 import List from "./Submit.js";
+import sketch from './sketch.js'
+import P5Wrapper from 'react-p5-wrapper';
 
 
 
@@ -20,8 +22,14 @@ class App extends Component {
         'https://www.facebook.com',
         'https://www.postimees.ee'
       ],
-      currentNR: 0  
+      currentNR: 0,
+      color: [12,14,200] 
     }
+  }
+
+  randomColor = () => {
+    this.setState({color:[Math.random()*255, Math.random()*255, Math.random()*255]}
+    )
   }
 
   newpic = (nr) => {
@@ -45,6 +53,11 @@ class App extends Component {
         {/* <div>
         {this.state.gamepic.map( (picture) => {return <img src = {picture}></img>})}
         </div> */}
+
+        <button onClick = {this.randomColor}> ranomdise color</button>
+
+        {/* P5 trial  */}
+        <P5Wrapper sketch={sketch} color={this.state.color }></P5Wrapper>
       </div>
     );
   }
