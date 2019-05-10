@@ -42,8 +42,11 @@ class Homepage extends Component {
         <h1>STUPID. SIMPLE. SILLY</h1>
         <p>Randomize a random game</p>
         <Button changepic={this.newpic} pics = {this.state.pic_and_link}  >Randomize</Button>
-        <List className= 'display' handler={this.handleSubmit} ></List>
+        <List  handler={this.handleSubmit} ></List>
+        <br></br>
+        <div className= 'display'>
         {this.showGames()}
+        </div>
       </div>
       
     );
