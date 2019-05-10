@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import './App.css';
-import Button from "./Button.js";
-import List from "./Submit.js";
-import sketch from './sketch.js'
-import P5Wrapper from 'react-p5-wrapper';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Homepage from './Homepage';
-import Canvas from './p5sketch1';
+import Game1 from './games/game1';
+import Game2 from './games/game2';
+import Game3 from './games/game3';
+import Game4 from './games/game4';
 
 
 
@@ -20,8 +19,12 @@ class App extends Component {
       <div className="App">
 
       <Route exact path = '/' component = {Homepage}/>
-      <Route exact path='/SOS' component={Canvas} />
-        <Route exact path='/madu' component={Canvas} />
+      <Route exact path='/game1' component={Game1} />
+      <Route exact path='/game2' component={Game2} />
+      <Route exact path='/game3' component={Game3} />
+      <Route exact path='/game4' component={Game4} />
+
+
       </div>
       </Router>
       

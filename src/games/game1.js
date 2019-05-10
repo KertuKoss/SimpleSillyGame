@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
-import './App.css';
-import sketch1 from './sketch.js'
+import sketch1 from '../p5sketches/sketch1.js'
 import P5Wrapper from 'react-p5-wrapper';
-import {Router, Route, Link} from "react-router";
 
-console.log("camhere")
-
-class Canvas extends Component {
+class Game1 extends Component {
 
     render() {
         return (
@@ -19,4 +15,4 @@ class Canvas extends Component {
 }
 
 
-export default Canvas; 
+export default Game1; 
