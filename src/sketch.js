@@ -73,12 +73,8 @@ export default function sketch(p){
         current.x = p.mouseX;
         current.y = p.mouseY;
 
-        // New particle's force is based on mouse movement
-        let force = p5.Vector.sub(current, previous);
-        force.p.mult(0.05);
-
         // Add new particle
-        paths[paths.length - 1].add(current, force);
+        paths[paths.length - 1].add(current);
         
         // Schedule next circle
         next = p.millis() + p.random(100);
@@ -116,9 +112,9 @@ export default function sketch(p){
         this.hue = p.random(100);
     }
 
-    add = (position, force) => {
+    add = (position) => {
         // Add a new particle with a position, force, and hue
-        this.particles.push(new Particle(position, force, this.hue));
+        this.particles.push(new Particle(position, this.hue));
     }
     
     // Display plath
@@ -146,19 +142,13 @@ export default function sketch(p){
 
     // Particles along the path
     class Particle {
-    constructor(position, force, hue) {
+    constructor(position, hue) {
         this.position = p.createVector(position.x, position.y);
-        this.velocity = p.createVector(force.x, force.y);
-        this.drag = 0.95;
-        this.lifespan = 255;
+        //this.drag = 0.95;
+        this.lifespan = 200;
     }
 
     update = () => {
-        // Move it
-        this.position.add(this.velocity);
-        // Slow it down
-        this.velocity.mult(this.drag);
-        // Fade it out
         this.lifespan--;
     }
 

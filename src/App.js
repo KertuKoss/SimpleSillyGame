@@ -4,6 +4,7 @@ import Button from "./Button.js";
 import List from "./Submit.js";
 import sketch from './sketch.js'
 import P5Wrapper from 'react-p5-wrapper';
+import {Router, Route, Link} from "react-router";
 
 
 
@@ -23,13 +24,7 @@ class App extends Component {
         'https://www.postimees.ee'
       ],
       currentNR: 0,
-      color: [12,14,200] 
     }
-  }
-
-  randomColor = () => {
-    this.setState({color:[Math.random()*255, Math.random()*255, Math.random()*255]}
-    )
   }
 
   newpic = (nr) => {
@@ -45,6 +40,7 @@ class App extends Component {
 
   render() {
     return (
+      
       <div className="App">
         <h1>STUPID. POINTLESS. SILLY</h1>
         <p>Randomize a random game</p>
@@ -53,12 +49,12 @@ class App extends Component {
         {/* <div>
         {this.state.gamepic.map( (picture) => {return <img src = {picture}></img>})}
         </div> */}
-
-        <button onClick = {this.randomColor}> ranomdise color</button>
-
+      {/* {this.showGame()} */}
         {/* P5 trial  */}
-        <P5Wrapper sketch={sketch} color={this.state.color }></P5Wrapper>
+        {/* color={this.state.color} */}
+        <P5Wrapper sketch={sketch} ></P5Wrapper>
       </div>
+      
     );
   }
 }
