@@ -58,7 +58,7 @@ export default function sketch(p){
     let canvas;
 
     p.setup=()=> {
-    canvas = p.createCanvas(720, 400);
+    canvas = p.createCanvas(p.windowWidth, p.windowHeight);
     current = p.createVector(0,0);
     previous = p.createVector(0,0);
     };
@@ -145,7 +145,7 @@ export default function sketch(p){
     constructor(position, hue) {
         this.position = p.createVector(position.x, position.y);
         //this.drag = 0.95;
-        this.lifespan = 200;
+        this.lifespan = 150;
     }
 
     update = () => {

@@ -47,6 +47,11 @@ button:hover{
   margin-top:50px;
 }
 
+.box {
+  width: 100px;
+  height: 100px;
+
+}
 .display .box{
   width: 200px;
   height: 200px;
