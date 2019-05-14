@@ -3,6 +3,10 @@ import './App.css';
 import Button from "./Button.js";
 import List from "./Submit.js";
 import {Router, Route, Link} from "react-router-dom";
+import pic1 from "./pics/game1.png";
+import pic2 from "./pics/game2.png";
+import pic3 from "./pics/game3.png";
+import pic4 from "./pics/game4.png";
 
 
 
@@ -12,10 +16,10 @@ class Homepage extends Component {
     this.state = {
       pressed: false,
       pic_and_link : [
-          ['https://upload.wikimedia.org/wikipedia/commons/8/8e/SOS_game.png', '/game1'],
-          ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr3XjC-_weePb_km_u0EiQX-Mc3qACZ1zMAAunwLyUcXeYXVd0','/game2'],
-          ['https://upload.wikimedia.org/wikipedia/commons/8/8e/SOS_game.png', '/game3'],
-          ['https://upload.wikimedia.org/wikipedia/commons/8/8e/SOS_game.png', '/game4']
+          [ pic1 ,'/game1'],
+          [ pic2,'/game2'],
+          [ pic3, '/game3'],
+          [ pic4, '/game4']
       ]
     }
   }
@@ -30,7 +34,7 @@ class Homepage extends Component {
 
   showGames = () => {
     if (this.state.pressed){
-      return (this.state.pic_and_link.map( (picture) => {return  <Link to = {picture[1]}><img className = 'pic' src = {picture[0]}></img></Link>}))
+      return (this.state.pic_and_link.map( (picture) => {return  <Link to = {picture[1]}><img className = 'pic' src = {picture[0]} ></img></Link>}))
     }
   }
 

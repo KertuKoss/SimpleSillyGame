@@ -1,9 +1,8 @@
 
-
 //--------------------------------------------------------------------------------------------------------
 
 // MY favourite, fading connected dots
-// Taken from https://p5js.org/examples/hello-p5-drawing.html  
+// Modified from https://p5js.org/examples/hello-p5-drawing.html  
 
 export default function sketch(p){
     // All the paths

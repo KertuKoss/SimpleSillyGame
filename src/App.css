@@ -1,13 +1,22 @@
+body{
+  background: repeating-linear-gradient( 
+    90deg,
+    #fff,
+    #fff 20px,
+    rgb(243, 243, 243) 20px,
+    rgb(243, 243, 243) 40px)
+
+}
+
+
 .App {
   text-align: center;
   font-family: Helvetica;
 }
 
 .pic {
-  width: 100px;
-  height: 100px;
-  border-left-color: green; 
-  border-width: 2px;
+  width: 130px;
+  height: 130px;
   margin:10px;
 }
 
@@ -15,7 +24,6 @@
   width: 100px; 
   height: 30px; 
   border-radius: 4px;
-  border-color:black;
   margin-top: 10px;
   border:1px;
   font-family: Helvetica;
@@ -36,10 +44,9 @@ button:hover{
   color: black;
 }
 
-.display{
-  width:400;
-  width:30;
-}
+
+
+
 
 
 

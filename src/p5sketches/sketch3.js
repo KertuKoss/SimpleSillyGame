@@ -16,6 +16,7 @@ export default function sketch(p){
     p.stroke(color);
     if (p.mouseIsPressed === true) {
         p.line(p.mouseX, p.mouseY, p.pmouseX, p.pmouseY);
+        p.strokeWeight(8);
     }
   }
   p.mousePressed = () =>{
