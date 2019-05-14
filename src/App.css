@@ -4,7 +4,8 @@ body{
     #fff,
     #fff 20px,
     rgb(243, 243, 243) 20px,
-    rgb(243, 243, 243) 40px)
+    rgb(243, 243, 243) 40px);
+  font-size: 25px;
 
 }
 
@@ -12,21 +13,23 @@ body{
 .App {
   text-align: center;
   font-family: Helvetica;
+
 }
 
 .pic {
-  width: 130px;
-  height: 130px;
-  margin:10px;
+  width: 228px;
+  height: 228px;
+  margin:18px;
 }
 
 .button{ 
-  width: 100px; 
-  height: 30px; 
-  border-radius: 4px;
-  margin-top: 10px;
+  width: 175px; 
+  height: 53px; 
+  border-radius: 7px;
+  margin-top: 17px;
   border:1px;
   font-family: Helvetica;
+  font-size: 20px;
 }
 
 button:hover{
